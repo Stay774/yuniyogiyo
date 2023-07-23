@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Learning Management System</title>
+  </head>
+  <body>
+    <h1>Microsoft 365 내 사용자 정보를 확인하는 방법</h1>
+    <p id="message">왼쪽 상단 ≡ 를 클릭한 뒤 사용자를 클릭합니다.</p>
+    <img id="activeUsers" src="https://stay774.github.io/yuniyogiyo/1.PNG" alt="Active Users" usemap="#activeUsersMap1">
+
+    <!-- 각 이미지마다 해당하는 이미지 맵을 생성합니다. -->
+    <map name="activeUsersMap1">
+      <area shape="rect" coords="13,182,371,234" href="javascript:changeImage()">
+    </map>
+    <map name="activeUsersMap2">
+      <area shape="rect" coords="64,170,169,199" href="javascript:changeImage()">
+    </map>
+    <map name="activeUsersMap3">
+        <area shape="rect" coords="20,164,195,206" href="javascript:changeImage()">
+    </map>
+    <map name="activeUsersMap4">
+        <area shape="rect" coords="64,170,169,199" href="javascript:changeImage()">
+    </map>
+    
+
+    <script type="text/javascript">
+      var currentImageIndex = 1;
+      var messages = [
+        "test",
+        "해당 목록에서 사용자 관련 메뉴가 나타나며 이 중 활성 사용자 탭을 클릭합니다.",
+        "활성 사용자 탭에 접속 되었다면 사용중인 Microsoft 365 계정들을 확인할 수 있습니다.",
+      ];
+
+      function changeImage() {
+        currentImageIndex++;
+        if (currentImageIndex > 3) {
+          currentImageIndex = 1;
+        }
+
+        // 이미지를 변경하면서 해당하는 이미지 맵도 적용합니다.
+        document.getElementById("activeUsers").src = "https://stay774.github.io/yuniyogiyo" + currentImageIndex + ".PNG";
+        document.getElementById("activeUsers").useMap = "#activeUsersMap" + currentImageIndex;
+        document.getElementById("message").textContent = messages[currentImageIndex - 1];
+      }
+    </script>
+  </body>
+</html>
