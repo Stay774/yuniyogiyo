@@ -6,7 +6,7 @@
   <body>
     <h1>Microsoft 365 내 사용자 정보를 확인하는 방법</h1>
     <p id="message">왼쪽 상단 ≡ 를 클릭한 뒤 사용자를 클릭합니다.</p>
-    <img id="activeUsers" src="C:\\Users\\htkim\\Downloads\\Photosec Free Website Template - Free-CSS.com\\photosec-html\\images\\1.png" alt="Active Users" usemap="#activeUsersMap1">
+    <img id="activeUsers" src="C:\\Users\\htkim\\Downloads\\Photosec Free Website Template - Free-CSS.com\\photosec-html\\images\\1.PNG" alt="Active Users" usemap="#activeUsersMap1">
 
     <!-- 각 이미지마다 해당하는 이미지 맵을 생성합니다. -->
     <map name="activeUsersMap1">
@@ -38,7 +38,7 @@
         }
 
         // 이미지를 변경하면서 해당하는 이미지 맵도 적용합니다.
-        document.getElementById("activeUsers").src = "C:\\Users\\htkim\\Downloads\\Photosec Free Website Template - Free-CSS.com\\photosec-html\\images\\" + currentImageIndex + ".png";
+        document.getElementById("activeUsers").src = "C:\\Users\\htkim\\Downloads\\Photosec Free Website Template - Free-CSS.com\\photosec-html\\images\\" + currentImageIndex + ".PNG";
         document.getElementById("activeUsers").useMap = "#activeUsersMap" + currentImageIndex;
         document.getElementById("message").textContent = messages[currentImageIndex - 1];
       }
